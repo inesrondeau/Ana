@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta Especial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 10vh;
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: white;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-family: 'Helvetica', sans-serif;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Cambio a rosa al pasar el ratón */
+        button:hover {
+            background-color: #ffc0cb;
+            border-color: #ffc0cb;
+        }
+
+        #gif-container {
+            display: none; /* Oculto al inicio */
+            width: 300px; /* Tamaño del GIF */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Soc la millor amiga del mon?</h1>
+
+    <div class="buttons-container">
+        <button onclick="mostrarGif()">si</button>
+        <button onclick="mostrarGif()">obviament</button>
+    </div>
+
+    <div id="gif-container">
+        <div class="tenor-gif-embed" data-postid="4581535057862657863" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+            <a href="https://tenor.com/view/happy-happi-yay-yay-yippie-yippie-dance-gif-4581535057862657863">Happy Happi Yay Yay Yippie Yippie Dance Sticker</a>
+        </div> 
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+
+    <script>
+        function mostrarGif() {
+            document.getElementById('gif-container').style.display = 'block';
+            
+            // Scroll suave para que se vea el gif al aparecer
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
